@@ -1,7 +1,10 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:5000/api"
+  baseURL: import.meta.env.VITE_API_URL,
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 export const getGroups = () => API.get("/groups");
 export const getGroupById = (id) => API.get(`/groups/${id}`);
