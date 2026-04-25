@@ -1,0 +1,178 @@
+﻿body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6fb;
+}
+
+.app {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #fff;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar .active {
+  background: #e6efff;
+  color: #2f6fed;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+.main h1 {
+  margin-bottom: 5px;
+}
+
+.task-box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.task-box input,
+.task-box .date-input,
+.task-box .time-input {
+  border: 1px solid #d7e0f8;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.task-box input {
+  flex: 1;
+  outline: none;
+}
+
+.task-box .date-input,
+.task-box .time-input {
+  width: 160px;
+}
+
+.task-box button {
+  background: #5a8dee;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.task-box button:disabled {
+  background: #aac3f5;
+  cursor: not-allowed;
+}
+
+.filter-status {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #d7e0f8;
+  color: #475569;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-pill:hover {
+  background: #f4f7ff;
+}
+
+.filter-pill.active {
+  background: #5a8dee;
+  color: white;
+  border-color: transparent;
+}
+
+.loading {
+  margin-top: 20px;
+  color: #475569;
+}
+
+/* Task list */
+.task-list {
+  margin-top: 20px;
+}
+
+.task-item {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.task-content input {
+  width: 18px;
+  height: 18px;
+}
+
+.task-content div {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-meta {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #667085;
+}
+
+.task-content.completed span {
+  text-decoration: line-through;
+  color: #8a97ac;
+}
+
+.delete-button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.empty {
+  color: gray;
+  margin-top: 20px;
+}
